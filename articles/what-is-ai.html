@@ -2,89 +2,833 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Learn what artificial intelligence is, how it works, its everyday applications, benefits and limitations in this beginner-friendly guide.">
-<title>What Is Artificial Intelligence? A Beginner's Guide | NEXORA</title>
-<style>
-*{box-sizing:border-box}
-body{margin:0;font-family:Arial,sans-serif;color:#172033;background:#f7f9fc;line-height:1.85}
-header,footer{background:#101b35;color:white;padding:20px 7%}
-header a,footer a{color:#82c7ff;text-decoration:none}
-.logo{font-size:25px;font-weight:bold}
-main{max-width:850px;margin:45px auto;padding:25px;background:white;border-radius:12px}
-.category{color:#2879bd;font-weight:bold;font-size:13px;letter-spacing:2px}
-h1{font-size:clamp(30px,5vw,44px);line-height:1.25;color:#142b50}
-h2{margin-top:32px;color:#142b50}
-p{margin:15px 0}
-li{margin:10px 0}
-.note{background:#eef5fc;padding:18px;border-radius:8px}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>What Is Artificial Intelligence? Complete Beginner's Guide | NEXORA</title>
+
+  <meta name="description" content="Discover what artificial intelligence is, how AI works, the difference between machine learning and generative AI, real-world examples, benefits and risks.">
+
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="NEXORA">
+
+  <meta property="og:title" content="What Is Artificial Intelligence? A Beginner's Guide">
+  <meta property="og:description" content="A practical introduction to AI, machine learning, generative AI and responsible use.">
+  <meta property="og:type" content="article">
+
+  <link rel="canonical" href="https://manojbeniwal1411-png.github.io/nexorwa/articles/what-is-ai.html">
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      color: #263248;
+      background: #f5f7fb;
+      line-height: 1.85;
+    }
+
+    header {
+      background: #101b35;
+      color: white;
+      padding: 18px 7%;
+    }
+
+    .header-inner {
+      max-width: 1150px;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      color: #72d4ff;
+      text-decoration: none;
+      font-size: 26px;
+      font-weight: bold;
+      letter-spacing: 2px;
+    }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    nav a:hover {
+      color: #72d4ff;
+    }
+
+    main {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 42px;
+      background: white;
+      border-radius: 14px;
+      box-shadow: 0 5px 25px rgba(20, 35, 60, 0.05);
+    }
+
+    .category {
+      color: #1976bb;
+      font-size: 13px;
+      font-weight: bold;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      color: #142b50;
+      font-size: clamp(31px, 5vw, 46px);
+      line-height: 1.2;
+      margin: 14px 0;
+    }
+
+    h2 {
+      color: #142b50;
+      font-size: 25px;
+      line-height: 1.4;
+      margin-top: 42px;
+      scroll-margin-top: 20px;
+    }
+
+    h3 {
+      color: #193b65;
+      margin-top: 25px;
+    }
+
+    p {
+      margin: 16px 0;
+    }
+
+    li {
+      margin: 10px 0;
+    }
+
+    a {
+      color: #1766b2;
+    }
+
+    .intro {
+      color: #56657a;
+      font-size: 18px;
+    }
+
+    .article-meta {
+      color: #778399;
+      font-size: 13px;
+      margin: 15px 0 28px;
+    }
+
+    .toc, .info-box {
+      background: #eef5fc;
+      border-left: 4px solid #3185c7;
+      padding: 20px 24px;
+      border-radius: 8px;
+      margin: 28px 0;
+    }
+
+    .toc h2 {
+      margin: 0 0 10px;
+      font-size: 21px;
+    }
+
+    .toc ul {
+      padding-left: 20px;
+      margin-bottom: 0;
+    }
+
+    .toc a {
+      text-decoration: none;
+    }
+
+    .comparison {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+      font-size: 14px;
+    }
+
+    .comparison th,
+    .comparison td {
+      border: 1px solid #dce3ed;
+      padding: 12px;
+      text-align: left;
+      vertical-align: top;
+    }
+
+    .comparison th {
+      background: #edf3fa;
+      color: #142b50;
+    }
+
+    .comparison tr:nth-child(even) {
+      background: #fafbfd;
+    }
+
+    .faq {
+      border-bottom: 1px solid #e3e8f0;
+      padding: 12px 0;
+    }
+
+    .faq h3 {
+      margin-bottom: 5px;
+    }
+
+    .references li {
+      overflow-wrap: anywhere;
+    }
+
+    footer {
+      background: #101b35;
+      color: #dce6f7;
+      padding: 30px 7%;
+      text-align: center;
+    }
+
+    footer a {
+      color: #82c7ff;
+      text-decoration: none;
+      margin: 0 8px;
+    }
+
+    footer p {
+      font-size: 14px;
+    }
+
+    @media (max-width: 650px) {
+      main {
+        margin: 18px 10px;
+        padding: 23px 18px;
+      }
+
+      header {
+        padding: 18px;
+      }
+
+      .header-inner {
+        justify-content: center;
+      }
+
+      nav {
+        justify-content: center;
+      }
+
+      .comparison {
+        font-size: 12px;
+      }
+
+      .comparison th,
+      .comparison td {
+        padding: 8px;
+      }
+    }
+  </style>
 </head>
+
 <body>
-<header><a href="../index.html" class="logo">NEXORA.</a></header>
+
+<header>
+  <div class="header-inner">
+    <a href="../index.html" class="logo">NEXORA.</a>
+
+    <nav>
+      <a href="../index.html">Home</a>
+      <a href="../about.html">About</a>
+      <a href="../contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
 
 <main>
-<div class="category">ARTIFICIAL INTELLIGENCE</div>
-<h1>What Is Artificial Intelligence? A Beginner's Guide</h1>
-<p><strong>Understanding AI, how it works, where it is used and what its limitations mean for everyday users.</strong></p>
 
-<p>Artificial intelligence, commonly known as AI, is a field of technology that focuses on creating computer systems capable of performing tasks that normally require aspects of human intelligence. These tasks can include recognising patterns, understanding language, analysing information and generating content.</p>
+  <div class="category">Artificial Intelligence</div>
 
-<h2>1. What Does Artificial Intelligence Mean?</h2>
-<p>Artificial intelligence refers to computer systems designed to perform specific tasks using data, algorithms and computational models. Different AI systems have different capabilities. Some identify objects in photographs, while others can answer questions or help analyse large amounts of information.</p>
-<p>AI does not necessarily think or understand the world in the same way that a human does. Many systems identify patterns in information and use those patterns to produce predictions or responses.</p>
+  <h1>What Is Artificial Intelligence? A Complete Beginner's Guide</h1>
 
-<h2>2. How Does AI Work?</h2>
-<p>Many modern AI systems use machine learning. Machine learning is a method in which computer systems learn patterns from examples rather than relying only on individually written instructions.</p>
-<ul>
-<li><strong>Data:</strong> Information used to develop and evaluate a system.</li>
-<li><strong>Training:</strong> A process that helps a model identify patterns in data.</li>
-<li><strong>Model:</strong> The trained system that produces predictions or outputs.</li>
-<li><strong>Evaluation:</strong> Testing how accurately and reliably the system performs.</li>
-</ul>
+  <p class="intro">
+    Artificial intelligence is becoming part of everyday technology.
+    This guide explains what AI means, how it works, where it is used
+    and why understanding its limitations matters.
+  </p>
 
-<h2>3. Examples of AI in Everyday Life</h2>
-<p>AI is already used in many familiar digital services. Examples include:</p>
-<ul>
-<li>Navigation applications that estimate journey times.</li>
-<li>Email services that identify potential spam messages.</li>
-<li>Streaming platforms that recommend films and programmes.</li>
-<li>Voice assistants that respond to spoken requests.</li>
-<li>Translation tools that help people communicate across languages.</li>
-</ul>
+  <div class="article-meta">
+    NEXORA | Beginner's Technology Guide | Updated 22 November 2026
+  </div>
 
-<h2>4. Benefits of Artificial Intelligence</h2>
-<p>AI can help people and organisations complete certain tasks more efficiently. It can process large datasets, assist with repetitive work and help users explore information.</p>
-<p>In education, AI tools can explain difficult concepts. In businesses, they can support customer service and data analysis. In healthcare, appropriately designed systems can assist professionals with certain information-based tasks.</p>
+  <p>
+    Artificial intelligence, usually called AI, is a field of computer
+    science focused on creating systems that can perform tasks commonly
+    associated with human intelligence. These tasks include recognising
+    patterns, processing language, making predictions and generating
+    different types of content.
+  </p>
 
-<h2>5. Limitations and Risks of AI</h2>
-<p>AI systems are not always accurate. They can produce incorrect information, reflect problems present in their training data or misunderstand a user's request.</p>
-<p>Privacy, security, fairness and transparency are also important considerations. People should avoid entering sensitive personal information into tools without understanding how that information may be handled.</p>
+  <p>
+    AI is not one single technology. It includes different approaches
+    and methods designed for different purposes. Some systems identify
+    objects in images, while others help organise information, recommend
+    products or generate written responses.
+  </p>
 
-<h2>6. How to Use AI Responsibly</h2>
-<ul>
-<li>Check important information against reliable sources.</li>
-<li>Do not assume every AI-generated answer is correct.</li>
-<li>Avoid sharing confidential personal information.</li>
-<li>Follow copyright rules when using generated material.</li>
-<li>Use human judgement for important decisions.</li>
-</ul>
+  <div class="info-box">
+    <strong>Simple definition:</strong>
+    Artificial intelligence allows computer systems to process information
+    and produce outputs such as predictions, classifications,
+    recommendations or generated content.
+  </div>
 
-<h2>Conclusion</h2>
-<p>Artificial intelligence is an important area of modern technology with applications across education, business, communication and everyday digital services. Understanding its capabilities and limitations can help people make better decisions about when and how to use it.</p>
+  <div class="toc">
+    <h2>In This Guide</h2>
+    <ul>
+      <li><a href="#meaning">What does artificial intelligence mean?</a></li>
+      <li><a href="#types">Different types of AI technology</a></li>
+      <li><a href="#working">How does AI work?</a></li>
+      <li><a href="#example">A practical example of AI</a></li>
+      <li><a href="#everyday">AI in everyday life</a></li>
+      <li><a href="#benefits">Benefits of artificial intelligence</a></li>
+      <li><a href="#limitations">Limitations and risks</a></li>
+      <li><a href="#responsible">Using AI responsibly</a></li>
+      <li><a href="#future">What could happen next?</a></li>
+      <li><a href="#faq">Frequently asked questions</a></li>
+      <li><a href="#sources">Further reading and sources</a></li>
+    </ul>
+  </div>
 
-<div class="note">
-<strong>About this guide:</strong> This beginner-friendly article introduces key AI concepts. Readers should consult specialist sources for technical or high-stakes decisions.
-</div>
+  <section id="meaning">
+    <h2>1. What Does Artificial Intelligence Mean?</h2>
+
+    <p>
+      Artificial intelligence refers to computer systems designed to
+      perform tasks by processing data and applying computational methods.
+      Depending on the system, these tasks may involve recognising patterns,
+      interpreting language, identifying objects or estimating likely
+      outcomes.
+    </p>
+
+    <p>
+      For example, an email service may use an AI model to identify
+      messages that appear to be spam. A navigation application may use
+      predictive systems to estimate journey times using available traffic
+      information.
+    </p>
+
+    <p>
+      It is important to understand that an AI system does not necessarily
+      understand information in the same way a person does. Its outputs
+      depend on its design, the information available to it and the
+      conditions in which it operates.
+    </p>
+  </section>
+
+  <section id="types">
+    <h2>2. Different Types of AI Technology</h2>
+
+    <p>
+      Several important concepts are used when discussing modern AI.
+      Understanding the differences makes technology news and product
+      descriptions easier to follow.
+    </p>
+
+    <h3>Artificial Intelligence</h3>
+    <p>
+      AI is the broad field that includes computer systems designed
+      to perform tasks associated with intelligence. It covers many
+      different methods and applications.
+    </p>
+
+    <h3>Machine Learning</h3>
+    <p>
+      Machine learning is a branch of AI in which systems use examples
+      and data to identify patterns and improve their performance on
+      particular tasks.
+    </p>
+
+    <h3>Deep Learning</h3>
+    <p>
+      Deep learning is a type of machine learning that uses multi-layered
+      artificial neural networks. It is used in areas such as image
+      recognition, speech processing and language technology.
+    </p>
+
+    <h3>Generative AI</h3>
+    <p>
+      Generative AI is designed to create new outputs in response to
+      instructions or prompts. Depending on the tool, these outputs
+      may include text, images, audio, video or computer code.
+    </p>
+
+    <table class="comparison">
+      <thead>
+        <tr>
+          <th>Technology</th>
+          <th>Meaning</th>
+          <th>Example</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>AI</td>
+          <td>Broad field of intelligent computer systems</td>
+          <td>Image recognition</td>
+        </tr>
+        <tr>
+          <td>Machine Learning</td>
+          <td>Learning patterns from data</td>
+          <td>Spam classification</td>
+        </tr>
+        <tr>
+          <td>Deep Learning</td>
+          <td>Machine learning using multi-layer neural networks</td>
+          <td>Speech recognition</td>
+        </tr>
+        <tr>
+          <td>Generative AI</td>
+          <td>Creating new content from learned patterns</td>
+          <td>Text or image generation</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p>
+      These terms are related, but they are not interchangeable.
+      Generative AI is one category of AI, not the name for every
+      artificial intelligence system.
+    </p>
+  </section>
+
+  <section id="working">
+    <h2>3. How Does Artificial Intelligence Work?</h2>
+
+    <p>
+      The way an AI system works depends on its purpose. Many modern
+      machine-learning systems are developed through a process that
+      involves data, model training, testing and deployment.
+    </p>
+
+    <h3>Step 1: Collecting and preparing data</h3>
+    <p>
+      Developers select information relevant to the task. The data
+      may include text, images, numerical records or other digital
+      information. It needs to be prepared so that the system can
+      process it appropriately.
+    </p>
+
+    <h3>Step 2: Training a model</h3>
+    <p>
+      During training, an algorithm adjusts a model's internal
+      parameters to identify patterns in the examples it receives.
+      The exact training method varies depending on the technology.
+    </p>
+
+    <h3>Step 3: Testing and evaluation</h3>
+    <p>
+      Developers evaluate how the model performs on data that was
+      not used in the same way during training. Testing can reveal
+      errors, weaknesses and situations where the model may not
+      perform reliably.
+    </p>
+
+    <h3>Step 4: Using the model</h3>
+    <p>
+      Once deployed, a model receives new input and produces an output.
+      Depending on its purpose, that output could be a prediction,
+      classification, recommendation or generated response.
+    </p>
+
+    <div class="info-box">
+      <strong>Important:</strong>
+      Not every AI system uses the same training process. Some systems
+      use machine learning, while other approaches use different
+      computational techniques.
+    </div>
+  </section>
+
+  <section id="example">
+    <h2>4. A Practical Example: How an Email Spam Filter Works</h2>
+
+    <p>
+      Imagine an email service that needs to separate unwanted messages
+      from ordinary emails. A machine-learning system can be trained
+      using examples of messages that have been labelled as spam or
+      not spam.
+    </p>
+
+    <ol>
+      <li>
+        <strong>Examples:</strong>
+        The system receives a collection of labelled email examples.
+      </li>
+      <li>
+        <strong>Pattern identification:</strong>
+        It processes characteristics such as message wording,
+        links and other available signals.
+      </li>
+      <li>
+        <strong>Prediction:</strong>
+        When a new email arrives, the model estimates whether
+        the message is likely to be spam.
+      </li>
+      <li>
+        <strong>Review:</strong>
+        The email service applies its rules to decide how the
+        message should be handled.
+      </li>
+    </ol>
+
+    <p>
+      This example also shows why AI systems need evaluation.
+      A legitimate message might occasionally be classified incorrectly.
+      Reliable services need ways to identify and correct such mistakes.
+    </p>
+  </section>
+
+  <section id="everyday">
+    <h2>5. Examples of AI in Everyday Life</h2>
+
+    <h3>Navigation and travel</h3>
+    <p>
+      Digital navigation services can use data and predictive models
+      to estimate travel times, identify traffic patterns and suggest
+      possible routes.
+    </p>
+
+    <h3>Email and online security</h3>
+    <p>
+      Some email and security services use automated classification
+      to identify suspicious messages, unusual activity or potential
+      spam.
+    </p>
+
+    <h3>Entertainment recommendations</h3>
+    <p>
+      Streaming and shopping platforms may analyse user interactions
+      to recommend films, music or products that could be relevant.
+    </p>
+
+    <h3>Language and translation</h3>
+    <p>
+      Language technologies can help translate text, recognise speech
+      and support communication between people who speak different
+      languages.
+    </p>
+
+    <h3>Education</h3>
+    <p>
+      Some educational tools use AI to explain concepts, provide
+      practice feedback or help learners organise information.
+      Their outputs should still be checked against reliable learning
+      materials.
+    </p>
+
+    <h3>Business operations</h3>
+    <p>
+      Businesses may use AI for tasks such as analysing customer
+      feedback, organising documents, identifying patterns in sales
+      information and supporting customer-service workflows.
+    </p>
+  </section>
+
+  <section id="benefits">
+    <h2>6. Benefits of Artificial Intelligence</h2>
+
+    <p>
+      When designed and used appropriately, AI can offer practical
+      advantages to individuals and organisations.
+    </p>
+
+    <ul>
+      <li>
+        <strong>Handling repetitive tasks:</strong>
+        Some routine digital processes can be automated.
+      </li>
+      <li>
+        <strong>Processing large datasets:</strong>
+        AI tools can help identify patterns across large collections
+        of information.
+      </li>
+      <li>
+        <strong>Supporting accessibility:</strong>
+        Speech recognition, captions and translation tools can help
+        people interact with digital information.
+      </li>
+      <li>
+        <strong>Supporting research:</strong>
+        Certain tools can help organise information and generate
+        starting points for further investigation.
+      </li>
+      <li>
+        <strong>Improving workflows:</strong>
+        Organisations can use suitable systems to support selected
+        administrative and analytical tasks.
+      </li>
+    </ul>
+
+    <p>
+      The benefits depend on the quality of the system, the task
+      being performed and the way people use its outputs.
+    </p>
+  </section>
+
+  <section id="limitations">
+    <h2>7. Limitations and Risks of AI</h2>
+
+    <p>
+      AI can be useful, but it is not automatically accurate, fair
+      or suitable for every situation. Understanding its limitations
+      is just as important as understanding its benefits.
+    </p>
+
+    <h3>Incorrect information</h3>
+    <p>
+      Generative AI tools can produce responses that sound convincing
+      but contain mistakes. Users should independently verify important
+      facts, names, figures and references.
+    </p>
+
+    <h3>Bias and fairness</h3>
+    <p>
+      If training data contains unbalanced or unfair patterns, a model
+      may reproduce or amplify some of those problems. Developers need
+      to test systems for different types of bias.
+    </p>
+
+    <h3>Privacy</h3>
+    <p>
+      Some AI services process information entered by users. Before
+      sharing personal or confidential information, people should
+      understand the service's privacy terms and data-handling practices.
+    </p>
+
+    <h3>Security</h3>
+    <p>
+      AI systems can introduce security concerns, including misuse
+      of generated content and weaknesses in the systems that process
+      information. Appropriate safeguards and monitoring matter.
+    </p>
+
+    <h3>Limited context</h3>
+    <p>
+      An AI model may not have access to all relevant information
+      about a situation. Its answer may therefore be incomplete
+      or unsuitable for a particular person or organisation.
+    </p>
+
+    <div class="info-box">
+      <strong>Key point:</strong>
+      AI outputs should not automatically be treated as verified facts.
+      For important decisions, use reliable evidence and appropriate
+      human judgement.
+    </div>
+  </section>
+
+  <section id="responsible">
+    <h2>8. How to Use AI Responsibly</h2>
+
+    <p>
+      Responsible use means understanding what a tool can and cannot
+      do, protecting personal information and checking its outputs.
+    </p>
+
+    <ul>
+      <li>Check important claims using trustworthy sources.</li>
+      <li>Avoid sharing passwords, financial details or confidential data.</li>
+      <li>Read the privacy information of services you use.</li>
+      <li>Review generated work before relying on or publishing it.</li>
+      <li>Respect copyright and the rights of original creators.</li>
+      <li>Use qualified human expertise for high-stakes decisions.</li>
+      <li>Consider fairness and accessibility when choosing AI tools.</li>
+    </ul>
+
+    <p>
+      The US National Institute of Standards and Technology identifies
+      characteristics such as reliability, safety, security,
+      transparency, privacy and fairness as important considerations
+      in managing AI risks.
+    </p>
+  </section>
+
+  <section id="future">
+    <h2>9. What Could Happen Next in Artificial Intelligence?</h2>
+
+    <p>
+      AI research and development continue to change. Researchers and
+      organisations are exploring applications in areas such as
+      scientific research, education, software development,
+      accessibility and business operations.
+    </p>
+
+    <p>
+      Future progress will depend not only on technical improvements
+      but also on responsible development, appropriate regulation,
+      security, public trust and the ability to evaluate real-world
+      performance.
+    </p>
+
+    <p>
+      It is difficult to predict exactly how quickly individual
+      applications will develop. Different industries may adopt
+      technologies at different speeds, and some proposed uses may
+      not become practical.
+    </p>
+  </section>
+
+  <section id="faq">
+    <h2>10. Frequently Asked Questions</h2>
+
+    <div class="faq">
+      <h3>Is artificial intelligence the same as machine learning?</h3>
+      <p>
+        No. Artificial intelligence is the broader field.
+        Machine learning is one approach within AI that uses
+        data to identify patterns and make predictions.
+      </p>
+    </div>
+
+    <div class="faq">
+      <h3>Can AI make mistakes?</h3>
+      <p>
+        Yes. AI systems can produce inaccurate predictions,
+        classifications or generated information. Their outputs
+        should be evaluated according to the task and its risks.
+      </p>
+    </div>
+
+    <div class="faq">
+      <h3>What is generative AI used for?</h3>
+      <p>
+        Generative AI can produce content such as text, images,
+        audio, video and computer code, depending on the model
+        and application.
+      </p>
+    </div>
+
+    <div class="faq">
+      <h3>Does AI always need the internet?</h3>
+      <p>
+        No. Some AI applications run through online services,
+        while others can operate locally on computers or devices.
+        The requirements depend on the particular system.
+      </p>
+    </div>
+
+    <div class="faq">
+      <h3>Should students rely entirely on AI for learning?</h3>
+      <p>
+        No. AI can be used as a learning aid, but students should
+        understand the material, check facts and follow their
+        school or university's academic rules.
+      </p>
+    </div>
+
+    <div class="faq">
+      <h3>Is every automated computer system AI?</h3>
+      <p>
+        No. Many automated systems follow fixed rules without
+        using AI techniques. Automation and artificial intelligence
+        are related concepts, but they are not identical.
+      </p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Conclusion</h2>
+
+    <p>
+      Artificial intelligence is a broad and developing area of
+      technology. It includes systems that recognise patterns,
+      process language, make predictions and generate content.
+    </p>
+
+    <p>
+      AI already supports many digital services, from navigation
+      and email filtering to translation and business analysis.
+      However, its usefulness depends on reliability, suitable
+      data, responsible design and informed human oversight.
+    </p>
+
+    <p>
+      Understanding both the possibilities and limitations of AI
+      helps people make more informed decisions about the technology
+      they use.
+    </p>
+  </section>
+
+  <section id="sources">
+    <h2>Further Reading and Sources</h2>
+
+    <p>
+      The following resources provide additional information
+      about artificial intelligence, generative AI and responsible
+      AI development:
+    </p>
+
+    <ul class="references">
+      <li>
+        <a href="https://www.nist.gov/itl/ai-risk-management-framework"
+           target="_blank" rel="noopener noreferrer">
+          National Institute of Standards and Technology —
+          Artificial Intelligence Risk Management Framework
+        </a>
+      </li>
+
+      <li>
+        <a href="https://www.gov.uk/government/publications/ai-insights/ai-insights-generative-ai-html"
+           target="_blank" rel="noopener noreferrer">
+          UK Government — AI Insights: Generative AI
+        </a>
+      </li>
+
+      <li>
+        <a href="https://www.ibm.com/think/topics/generative-ai"
+           target="_blank" rel="noopener noreferrer">
+          IBM — What Is Generative AI?
+        </a>
+      </li>
+
+      <li>
+        <a href="https://developers.google.com/machine-learning/crash-course"
+           target="_blank" rel="noopener noreferrer">
+          Google — Machine Learning Crash Course
+        </a>
+      </li>
+    </ul>
+
+    <p>
+      <strong>Editorial note:</strong>
+      This guide is intended for general educational purposes.
+      Technology changes over time, so readers should consult
+      the linked resources for further technical detail.
+    </p>
+  </section>
+
 </main>
 
 <footer>
-<p>© 2026 NEXORA.</p>
-<a href="../index.html">Home</a> |
-<a href="../about.html">About</a> |
-<a href="../privacy.html">Privacy</a> |
-<a href="../contact.html">Contact</a>
+  <p>© 2026 NEXORA. All rights reserved.</p>
+
+  <p>
+    <a href="../index.html">Home</a> |
+    <a href="../about.html">About</a> |
+    <a href="../privacy.html">Privacy Policy</a> |
+    <a href="../contact.html">Contact</a>
+  </p>
 </footer>
+
 </body>
 </html>
